@@ -1,4 +1,4 @@
-# [Olist E-Commerce Performance Analysis]
+# [Candy Distributor Sales Analysis]
 > *Uncovering the Drivers of Revenue, Customer Churn, and Logistics Inefficiencies to Drive Data‑Informed Business Decisions.*
 
 ---
