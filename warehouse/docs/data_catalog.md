@@ -10,14 +10,14 @@ The Gold Layer is the business-level data representation, structured to support 
 
 | Column Name   | Data Type | Description                                                 |
 | ------------- | --------- | ----------------------------------------------------------- |
-| product\_key  | INT       | surrogate key Uniquely identifying each product record.                         |
+| product\_key  | INT       | surrogate key Uniquely identifying each product record.     |
 | product\_id   | INT       | Unique identifier for each product.                         |
 | product\_name | NVARCHAR  | Name or description of the product.                         |
 | division      | NVARCHAR  | Business division or category to which the product belongs. |
 | unit\_price   | DECIMAL   | Selling price per unit of the product.                      |
 | unit\_cost    | DECIMAL   | Cost incurred per unit for the product.                     |
 | factory       | NVARCHAR  | Factory or manufacturing unit producing the product.        |
-| target        | DECIMAL   | Target sales or revenue goal associated with the product.   |
+| target        | INT       | Target sales or revenue goal associated with the product.   |
 
 ---
 
@@ -27,15 +27,15 @@ The Gold Layer is the business-level data representation, structured to support 
 
 | Column Name  | Data Type | Description                                                    |
 | ------------ | --------- | -------------------------------------------------------------- |
-| customer_id | INT (PK)  | Unique identifier linking to the customer in sales fact table. |
+| customer_id  | INT       | Unique identifier linking to the customer in sales fact table. |
 | zip          | NVARCHAR  | ZIP code of the customer location.                             |
-| latitude     | DECIMAL   | Latitude coordinate of the location.                           |
-| longitude    | DECIMAL   | Longitude coordinate of the location.                          |
+| latitude     | FLOAT     | Latitude coordinate of the location.                           |
+| longitude    | FLOAT     | Longitude coordinate of the location.                          |
 | city         | NVARCHAR  | City name where the customer resides.                          |
 | state\_name  | NVARCHAR  | State name corresponding to the customer's location.           |
 | zcta         | NVARCHAR  | ZIP Code Tabulation Area (US census grouping of ZIP codes).    |
 | population   | INT       | Population of the area defined by the ZIP code.                |
-| density      | DECIMAL   | Population density of the area (people per sq. km).            |
+| density      | FLOAT     | Population density of the area (people per sq. km).            |
 | county\_fips | NVARCHAR  | Federal Information Processing Standard code for the county.   |
 | country      | NVARCHAR  | Country of residence.                                          |
 | region       | NVARCHAR  | Geographic region classification.                              |
@@ -51,9 +51,9 @@ The Gold Layer is the business-level data representation, structured to support 
 
 | Column Name   | Data Type | Description                                                     |
 | ------------- | --------- | --------------------------------------------------------------- |
-| order\_id     | INT (PK)  | Unique identifier for each sales order.                         |
-| customer\_id  | INT (FK1) | Links to **gold.dim\_location.customer\_id**.                   |
-| product\_id   | INT (FK2) | Links to **gold.dim\_products.product\_id**.                    |
+| order\_id     | INT       | Unique identifier for each sales order.                         |
+| customer\_id  | INT       | Links to **gold.dim\_location.customer\_id**.                   |
+| product\_key  | INT       | Links to **gold.dim\_products.product\_id**.                    |
 | order\_date   | DATE      | Date when the order was placed.                                 |
 | ship\_date    | DATE      | Date when the order was shipped.                                |
 | ship\_mode    | NVARCHAR  | Mode of shipment (e.g., Standard, Express).                     |
@@ -63,4 +63,4 @@ The Gold Layer is the business-level data representation, structured to support 
 | units         | INT       | Quantity of units sold.                                         |
 | gross\_profit | DECIMAL   | Profit for the order line (sales – cost).                       |
 | cost          | DECIMAL   | Total cost for the order line.                                  |
-| target        | DECIMAL   | Target sales value for the order line.                          |
+
