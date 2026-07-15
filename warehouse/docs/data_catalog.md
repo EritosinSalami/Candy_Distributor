@@ -10,7 +10,8 @@ The Gold Layer is the business-level data representation, structured to support 
 
 | Column Name   | Data Type | Description                                                 |
 | ------------- | --------- | ----------------------------------------------------------- |
-| product\_id   | INT (PK)  | Unique identifier for each product.                         |
+| product\_key  | INT       | surrogate key Uniquely identifying each product record.                         |
+| product\_id   | INT       | Unique identifier for each product.                         |
 | product\_name | NVARCHAR  | Name or description of the product.                         |
 | division      | NVARCHAR  | Business division or category to which the product belongs. |
 | unit\_price   | DECIMAL   | Selling price per unit of the product.                      |
