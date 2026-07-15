@@ -26,7 +26,7 @@ The Gold Layer is the business-level data representation, structured to support 
 
 | Column Name  | Data Type | Description                                                    |
 | ------------ | --------- | -------------------------------------------------------------- |
-| customer\_id | INT (PK)  | Unique identifier linking to the customer in sales fact table. |
+| customer_id | INT (PK)  | Unique identifier linking to the customer in sales fact table. |
 | zip          | NVARCHAR  | ZIP code of the customer location.                             |
 | latitude     | DECIMAL   | Latitude coordinate of the location.                           |
 | longitude    | DECIMAL   | Longitude coordinate of the location.                          |
