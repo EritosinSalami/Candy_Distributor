@@ -39,8 +39,8 @@ The Gold Layer is the business-level data representation, structured to support 
 | county\_fips | NVARCHAR  | Federal Information Processing Standard code for the county.   |
 | country      | NVARCHAR  | Country of residence.                                          |
 | region       | NVARCHAR  | Geographic region classification.                              |
-| imprecise    | BIT       | Indicates if location details are approximate.                 |
-| military     | BIT       | Flag to identify military addresses.                           |
+| imprecise    | NVARCHAR  | Indicates if location details are approximate.                 |
+| military     | NVARCHAR  | Flag to identify military addresses.                           |
 | timezone     | NVARCHAR  | Time zone of the location.                                     |
 
 ---
