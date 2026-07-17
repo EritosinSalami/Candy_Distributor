@@ -1,14 +1,5 @@
 # [Candy Distributor Sales Analysis]
-> *Uncovering the Drivers of Revenue, Customer Churn, and Logistics Inefficiencies to Drive Data‑Informed Business Decisions. *
-
----
-
-## Project Type Flags
-
-- Data Cleaning
-- Exploratory Data Analysis (EDA)
-- SQL Analysis
-- Data Visualization
+>  The US Candy Distributor dataset contains sales and geospatial shipment data for a US national candy distributor. It covers customer orders, product details, factory locations, and regional sales targets. Using Power BI and a structured data warehouse, I explore sales trends, product performance, and geospatial patterns from factory to customer delivery. The goal is to generate actionable insights that help optimize product strategy, enhance regional performance, and support data-driven business decisions.
 
 ---
 
