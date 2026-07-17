@@ -19,15 +19,14 @@
 
 Olist is a Brazilian marketplace connecting sellers to customers across multiple product categories. As an online platform, it faces common e‑commerce challenges: understanding revenue drivers, reducing customer churn, optimizing delivery logistics, and identifying profitable product segments. Part of he analysis of this project revealed that the over-estimation of the delivery days prompted some of the customers to cancel their orders which caused the business a potential profit. This project was motivated by the need to turn raw transactional data into actionable business intelligence.
 
-**Problem Statement:** How can Olist increase revenue, improve customer retention, and reduce logistics inefficiencies?  
-Specifically:  
-- Which products and regions drive revenue?  
-- Why do customers not return after their first purchase?  
-- What is causing orders cancellations by customers?
-- How do freight costs vary by region and product category, and what does that imply for profitability?
+**Problem Statement:** 
+- What are the most efficient factory-to-customer shipping routes? 
+- What are the least efficient factory-to-customer shipping routes? 
+- Which product lines have the best product margin?
+- Which product lines should be moved to a different factory to optimize shipping routes?
 
 
-**Approach:** I performed end‑to‑end analysis using SQL (MySQL Workbench) for data extraction, cleaning and analysis, Power BI for interactive dashboards. The project included RFM segmentation, geospatial distance calculations, and a detailed review of sales, customer behaviour, product performance, logistics, and payment patterns. All filtered to delivered orders for accurate revenue metrics.
+**Approach:** I performed a complete end-to-end analysis by building a Medallion-architecture data warehouse in SSMS, using SQL for data extraction, transformation, and cleaning and developed interactive dashboards in Power BI.
 
 **Outcome:** 
 - **Sales & Revenue:** Identified top‑performing products and regions, discovered that revenue growth stalled in late 2018 due to no data, with R$95,235 lost to cancellations.
