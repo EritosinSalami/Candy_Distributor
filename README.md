@@ -6,7 +6,7 @@
 ## Table of Contents
 1. [Project Overview](#1-project-overview)
 2. [Objectives](#2-objectives)
-3. [Project Scope & Tools](#3-project-scope--tools)
+3. [ProjectTools](#3-project-tools)
 4. [Data Workflow](#4-data-workflow)
 5. [ERD - Entity Relationship Diagram](#5-erd--entity-relationship-diagram)
 6. [Key Insights](#6-key-insights)
@@ -23,7 +23,7 @@ Olist is a Brazilian marketplace connecting sellers to customers across multiple
 - What are the most efficient factory-to-customer shipping routes? 
 - What are the least efficient factory-to-customer shipping routes? 
 - Which product lines have the best product margin?
-- Which product lines should be moved to a different factory to optimize shipping routes?
+- Which product lines should be moved to a different factory to optimize profitability?
 
 
 **Approach:** I performed a complete end-to-end analysis by building a Medallion-architecture data warehouse in SSMS, using SQL for data extraction, transformation, and cleaning and developed interactive dashboards in Power BI.
@@ -51,16 +51,7 @@ Olist is a Brazilian marketplace connecting sellers to customers across multiple
 
 ---
 
-## 3. Project Scope & Tools
-
-### Scope
-
-| Dimension | Details |
-|-----------|---------|
-| **In Scope** | Olist Brazilian E‑commerce Dataset (public), Analysis covers Revenue, Customer behaviour, Logistics and Product category performance |
-| **Out of Scope** | Sellers' profitability, Customer demographics and Marketing spend data were excluded |
-| **Time Period** | Sep 2016 - Oct 2018 |
-| **Granularity** | order_items (each product in an order), reviews (each review).  **Order‑level:** orders (each order), payments (each payment method). **Customer‑level:** customers (for RFM and churn).  **monthly aggregates** for time‑series charts (revenue trends, growth rates). |
+## 3. Tools
 
 ### Tools & Technologies
 
@@ -86,47 +77,6 @@ Cleaning & Transformation
 Analysis & Modelling
       >
 Visualisation & Reporting
-
-1. **Source:**  The Olist Brazilian E‑commerce dataset (publicly available on Kaggle).
-   **Format:** 9 interconnected CSV files.
-   **Tables used:** orders, order_items, products, customers, sellers, geolocation, order_payments, order_reviews, marketing_qualified_leads, closed_deals.  
-   **Time period:** September 2016 – October 2018.
-
-2. **Ingestion:** **CSV → SQL:** CSV files were imported into MySQL Workbench using LOAD IMPORT WIZARD.  
-                  Also loaded into Power BI via “Get Data → Text/CSV” 
-
-3. **Cleaning:** **Missing dates:** Replaced `"NULL"` with `n/a` in delivery date columns.  
-   **Data types:** Converted price, freight_value, payment_value to DECIMAL; date columns to DATETIME.  
-   **Duplicates:** Removed duplicate order rows.  
-   **Null categories:** Filled empty product_category_name with `"n/a"`.  
-   **Outliers:** Flagged orders with price = 0 or negative for investigation (excluded from revenue metrics).
-
-4. **Transformation:** DeliveryDays (delivered date – purchase date)   EstDeliveryDays (estimated delivery date – purchase date)  
-   -Distance_km (Haversine formula between seller and customer geolocations)  
-   - Revenue R$ - InstallmentGroup (1 = “Full payment”, 2‑3 = “Short term”, 4‑6 = “Medium”, 7-12 = “Long”, 13+ = “Extended”)  
-   - **Aggregated tables:**  
-   - RFM table (customer‑level: Recency, Frequency, Monetary)  
-   - SalesMonthly (revenue, orders, AOV by month)  
-   - CategoryPerformance (revenue, units, freight % by product category)  
-   - **Star schema:** Built Date table related to orders on order_purchase_timestamp.
-
-5. **Analysis:** **Exploratory Data Analysis (EDA):** Distribution plots, time series (SQL + Power BI).  
-   - **RFM segmentation:** Ntile (Recency, Frequency, Monetary) to identify customer segments.
-   - **Geospatial analysis:** Distance calculation to compare estimated delivery days vs. actual distance (scatter plot).  
-   - **Statistical summaries:** Median, Ntiles, averages for delivery times, freight costs, review scores.
-   - **Business KPI measures (DAX):**  - Total Revenue, Total Orders, AOV, OnTimeDeliveryRate, Churn Rate, Revenue per Lead, etc.  
-   - **Hypothesis testing:** Proved that over‑estimated delivery days for short distances drive cancellations in São Paulo.
-
-6. **Output:** **Interactive Power BI dashboard** (4 pages) 
-  - Executive Summary (KPIs, revenue trend, top products)  
-  - Sales & Revenue (monthly / yearly, category, region)  
-  - Customer Behaviour (RFM segments, churn rate, conversion funnel)  
-  - Product Performance (price vs. volume matrix, review scores)  
-  - Logistics & Delivery (on‑time rate, map of delivery days, freight % by region/category)  
-  - Payment & Marketing (payment distribution, conversion rate by channel, revenue per lead)  
-  - **SQL scripts** (GitHub) – all queries used for extraction, cleaning, and analysis.  
-  - **Executable DAX measures** (ready to copy into any Power BI model).  
-  - **This documentation** – complete pipeline, findings, and recommendations.
 
 ---
 
@@ -203,6 +153,7 @@ Visuals(https://tinyurl.com/ycxn9tau)
 - Shuffling between two channel is what is best but the best performing channel is unknown. The “unknown” channel should be investigated by adding a tracking parameter to all marketing campaigns to identify the source that currently drives 16% conversion (the highest) and scale the best‑performing channel while it substitutes with Paid search (12%) and can as well replace with Organic search (11%) to reduce cost of marketing.
 
 ---
+NOTE; shipping dates were corrupted and some of the customers had no distance data (longitude, latitude)
 
 ## 8. Author
 
