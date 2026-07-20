@@ -1,0 +1,16 @@
+﻿product_key,product_id,product_name,division,unit_price,unit_cost,target,factory,latitude,longitude
+1,CHO-FUD-51000,Wonka Bar - Fudge Mallows,Chocolate,3.60,1.20,27000,Lot's O' Nuts,32.881893,-111.768036
+2,CHO-MIL-31000,Wonka Bar - Milk Chocolate,Chocolate,3.25,1.14,27000,Wicked Choccy's,32.076176,-81.088371
+3,CHO-NUT-13000,Wonka Bar - Nutty Crunch Surprise,Chocolate,3.49,1.00,27000,Lot's O' Nuts,32.881893,-111.768036
+4,CHO-SCR-58000,Wonka Bar -Scrumdiddlyumptious,Chocolate,3.60,1.10,27000,Lot's O' Nuts,32.881893,-111.768036
+5,CHO-TRI-54000,Wonka Bar - Triple Dazzle Caramel,Chocolate,3.75,1.30,27000,Wicked Choccy's,32.076176,-81.088371
+6,OTH-FIZ-56000,Fizzy Lifting Drinks,Other,3.75,1.50,3000,Sugar Shack,48.11914,-96.18115
+7,OTH-GUM-21000,Wonka Gum,Other,1.25,0.60,3000,Secret Factory,41.446333,-90.565487
+8,OTH-KAZ-38000,Kazookles,Other,3.25,3.00,3000,The Other Factory,35.1175,-89.971107
+9,OTH-LIC-15000,Lickable Wallpaper,Other,20.00,10.00,3000,Secret Factory,41.446333,-90.565487
+10,SUG-EVE-47000,Everlasting Gobstopper,Sugar,10.00,2.00,15000,Secret Factory,41.446333,-90.565487
+11,SUG-FUN-75000,Fun Dip,Sugar,1.50,0.90,15000,Sugar Shack,48.11914,-96.18115
+12,SUG-HAI-55000,Hair Toffee,Sugar,4.50,1.00,15000,The Other Factory,35.1175,-89.971107
+13,SUG-LAF-25000,Laffy Taffy,Sugar,1.99,0.75,15000,Sugar Shack,48.11914,-96.18115
+14,SUG-NER-92000,Nerds,Sugar,1.50,0.80,15000,Sugar Shack,48.11914,-96.18115
+15,SUG-SWE-91000,SweeTARTS,Sugar,1.50,0.80,15000,Sugar Shack,48.11914,-96.18115
