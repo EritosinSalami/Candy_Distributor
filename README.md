@@ -67,7 +67,8 @@ Visualisation & Reporting
 ---
 
 ## 4. ERD - Entity Relationship Diagram
-![ERD](https://tinyurl.com/5xm4jepu/chart.png)
+![ERD](https://tinyurl.com/5xm4jepu)
+
  
 ---
 
