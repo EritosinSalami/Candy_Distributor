@@ -28,7 +28,7 @@ The US candy distributor was missing out on potential revenue due to massive und
 **Approach:** I performed a complete end-to-end analysis by building a Medallion-architecture data warehouse in SSMS, using SQL for data extraction, transformation, and cleaning and developed interactive dashboards in Power BI.
 
 
-  The SQL Queries used to analyze and aggregate the data for this project can be found here: 
+  The SQL Queries used to analyze and aggregate the data for this project can be found [here](https://tinyurl.com/pfekt7pm)
 
   Dashboard visuals can be found here:
 
