@@ -68,7 +68,8 @@ Visualisation & Reporting
 
 ## 4. ERD - Entity Relationship Diagram
 ![ERD](https://tinyurl.com/5xm4jepu)
-
+<br>
+![erd](https://github.com/EritosinSalami/Candy_Distributor/blob/main/warehouse/docs/data_mart%20(2).png)
  
 ---
 
