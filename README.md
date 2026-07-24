@@ -67,7 +67,7 @@ Visualisation & Reporting
 ---
 
 ## 4. ERD - Entity Relationship Diagram
-![ERD](https://tinyurl.com/5xm4jepu)
+The US candy distributor operational database consists of three tables with a total of 10,194 records spanning the period Jan 2021 - Dec 2024. The database follows a star schema design with a single fact table (fact_sales) and two dimension tables (dim_products, dim_location).
 <br>
 ![erd](https://github.com/EritosinSalami/Candy_Distributor/blob/main/warehouse/docs/data_mart%20(2).png)
  
